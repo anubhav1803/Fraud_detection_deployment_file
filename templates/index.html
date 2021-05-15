@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div style="color:blue">
+        <form action="{{ url_for('predict')}}" method="post">
+            <h2>FRAUD DETECTION</h2>
+            <h3>Money Transacted</h3>
+            <input id="first" name="money_transacted" type="number ">
+            
+            <h3>Payment Method</h3><br><select name="payment_method_other_debit_cards" id="second" required="required">
+                <option value="other_debit_cards">other_debit_cards</option>
+                <option value="sbi_atm_cum_debit_card">sbi_atm_cum_debit_card</option>
+                <option value="unified_payments_interface">unified_payments_interface</option>
+                <option value="visa_master_credit_cards">visa_master_credit_cards</option>
+                
+                
+            </select>
+            <h3>partner_category</h3><br><select name="partner_category_cat_2" id="third" required="required">
+                <option value="cat_2">cat_2</option>
+                <option value="cat_3">cat_3</option>
+                <option value="cat_4">cat_4</option>
+                <option value="cat_5">cat_5</option>
+                <option value="cat_6">cat_6</option>
+                <option value="cat_7">cat_7</option>
+                <option value="cat_8">cat_8</option>
+                <option value="cat_9">cat_9</option>
+                
+            </select>
+            <h3>Device Type</h3><br><select name="device_type_ios_devices" id="fourth" required="required">
+                <option value="ios_devices">ios_devices</option>
+                <option value="other_pcs">other_pcs</option>
+                <option value="windows_pcs">windows_pcs</option>
+        
+                
+                
+            </select>
+            <h3>Transaction type Credit/Debit?</h3><br><select name="cred_deb_debit" id="fifth" required="required">
+                <option value="debit">Debit</option>
+                <option value="credit">Credit</option>
+                
+             </select>
+            <h3>Partner Pricing Category</h3><br><select name="partner_pricing_category_1" id="sixth" required="required">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="4">4</option>
+            </select>
+            <br><br><button id="sub" type="submit ">Predict fraud or not</button>
+            <br>
+
+
+
+
+        </form>
+
+
+
+        <br><br><h3>{{ prediction_text }}<h3>
+    </div>
+
+
+
+
+    <style>
+        body {
+            background-color: lightslategray;
+            text-align: center;
+            padding: 0px;
+        }
+        
+        #research {
+            font-size: 18px;
+            width: 100px;
+            height: 23px;
+            top: 23px;
+        }
+        
+        #box {
+            border-radius: 60px;
+            border-color: 45px;
+            border-style: solid;
+            font-family: cursive;
+            text-align: center;
+            background-color: rgb(168, 131, 61);
+            font-size: medium;
+            position: absolute;
+            width: 700px;
+            bottom: 9%;
+            height: 850px;
+            right: 30%;
+            padding: 0px;
+            margin: 0px;
+            font-size: 14px;
+        }
+        
+        #fuel {
+            width: 83px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 20px;
+        }
+        
+        #fuel:hover {
+            background-color: coral;
+        }
+        
+        #research {
+            width: 99px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        #research:hover {
+            background-color: coral;
+        }
+        
+        #resea {
+            width: 99px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        #resea:hover {
+            background-color: coral;
+        }
+        
+        #sub {
+            width: 120px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        #sub:hover {
+            background-color: darkcyan;
+        }
+        
+        #first {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #second {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #third {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #fourth {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #fifth {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #sixth {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+    </style>
+</body>
+
+</html>
